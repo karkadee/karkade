@@ -1,7 +1,7 @@
 import Head from "next/head"
 import Navigation from "../src/components/Navigation";
 
-export default function Home() {
+export default function Cart() {
   return (
     <div>
       <Head>

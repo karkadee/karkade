@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    h1{
+        @apply text-3xl text-slate-900 font-bold;
+    }
+
+    p{
+        @apply text-base text-slate-900;
+    }
+}
