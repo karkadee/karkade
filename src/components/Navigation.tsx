@@ -3,8 +3,8 @@ import React from "react";
 
 function Navigation() {
   return (
-    <nav className="">
-        <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-6 py-3 bg-white">
+    <nav className="bg-white w-full">
+        <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-6 py-3">
             <div className="md:w-40 lg:w-60 mr-0 ss:mr-2 sm:mr-4 md:mr-8 mb-2 ss:mb-0">
                 <button className="outline-green-600 p-1">
                     <Link href="/">
@@ -66,7 +66,7 @@ function Navigation() {
             </div>
         </div>
 
-        <div>
+        <div className="w-full flex flex-col ss:flex-row items-center justify-center px-2 sm:px-6 py-1">
 
         </div>
     </nav>
