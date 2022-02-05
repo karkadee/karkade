@@ -7,9 +7,9 @@ function Navigation() {
 
     const transitionNavBar = () => {
         if(window.scrollY > 100){
-            setShowCats(true);
-        }else{
             setShowCats(false);
+        }else{
+            setShowCats(true);
         }
     }
     
@@ -21,8 +21,8 @@ function Navigation() {
     console.log(showCats)
     
     return (
-        <nav className="bg-white w-full">
-            <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-6 py-3">
+        <nav className="w-full fixed top-0 left-0">
+            <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-6 py-3 bg-white">
                 <div className="md:w-40 lg:w-60 mr-0 ss:mr-2 sm:mr-4 md:mr-8 mb-2 ss:mb-0">
                     <button className="outline-green-600 p-1">
                         <Link href="/">
@@ -84,17 +84,7 @@ function Navigation() {
                 </div>
             </div>
 
-            <div 
-                className="hidden md:flex w-full flex-col ss:flex-row items-center justify-center px-2 sm:px-10 py-1"
-                data-aos="fade-down"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-                data-aos-anchor-placement="top-center"
-            >
+            <div className={`hidden md:flex w-full flex-col ss:flex-row items-center justify-center px-2 sm:px-10 py-1 bg-white transition-opacity duration-300 ${showCats ? "opacity-1" : "opacity-0"}`}>
                 {
                     productCategories.map((cat, i) => {
                         return (
