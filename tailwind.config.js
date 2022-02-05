@@ -9,7 +9,10 @@ module.exports = {
     extend: {
       screens: {
         ss: "400px"
-      }
+      },
+      colors: {
+        karkadeGray: "#F1F1F1",
+      },
     },
   },
   plugins: [],
