@@ -6,7 +6,7 @@ function Navigation() {
     const [showCats, setShowCats] = useState(true);
 
     const transitionNavBar = () => {
-        if(window.scrollY > 100){
+        if(window.scrollY > 300){
             setShowCats(false);
         }else{
             setShowCats(true);
@@ -21,7 +21,7 @@ function Navigation() {
     console.log(showCats)
     
     return (
-        <nav className="w-full fixed top-0 left-0">
+        <nav className="w-full fixed top-0 left-0 z-10">
             <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-6 py-3 bg-white">
                 <div className="md:w-40 lg:w-60 mr-0 ss:mr-2 sm:mr-4 md:mr-8 mb-2 ss:mb-0">
                     <button className="outline-green-600 p-1">
