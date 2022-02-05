@@ -6,7 +6,11 @@ module.exports = {
   ],
   mode: "jit",
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        ss: "400px"
+      }
+    },
   },
   plugins: [],
 }

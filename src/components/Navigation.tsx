@@ -3,8 +3,8 @@ import React from "react";
 
 function Navigation() {
   return (
-    <nav className="w-full flex items-center justify-between px-2 sm:px-6 py-2">
-        <div className="md:w-40 lg:w-60 mr-2 sm:mr-4 md:mr-8">
+    <nav className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-6 py-2">
+        <div className="md:w-40 lg:w-60 mr-0 ss:mr-2 sm:mr-4 md:mr-8 mb-2 ss:mb-0">
             <button className="outline-green-600 p-1">
                 <Link href="/">
                     <h1>Karkadē</h1>
@@ -12,12 +12,23 @@ function Navigation() {
             </button>
         </div>
 
-        <input 
-            className="hidden sm:block h-8 flex-1 outline-green-600"
-            placeholder="meklēt"
-        />
+        <div className="hidden sm:flex h-8 flex-1 rounded-md">
+            <input 
+                className="rounded-l-md hidden sm:block w-full h-full outline-green-600"
+                placeholder="meklēt"
+            />
 
-        <div className="ml-2 sm:ml-4 md:ml-8 md:w-40 lg:w-60 flex items-center justify-start">
+            <button className="outline-green-600 p-1 h-full w-20 flex items-center justify-center bg-green-600 rounded-r-md">
+                <img 
+                    className="w-5"
+                    src="/svg/search.svg" 
+                    alt="search" 
+                />
+            </button>
+        </div>
+        
+
+        <div className="justify-between ml-0 ss:ml-2 sm:ml-4 md:ml-8 w-full ss:w-52 sm:w-40 lg:w-60 flex items-center ss:justify-start">
             <button className="mr-1 sm:mr-4 outline-green-600 p-1">
                 <Link href="/">
                     <p className="font-bold">Sākums</p>
@@ -40,15 +51,15 @@ function Navigation() {
 
             <button className="outline-green-600 p-1">
                 <Link href="/cart">
-                    <p className="font-bold hidden sm:block">Grozs</p>
-                </Link>
-
-                <Link href="/cart">
-                    <img 
-                        className="w-6 block sm:hidden"
-                        src="/svg/cart.svg" 
-                        alt="shopping cart" 
-                    />
+                    <div className="flex">
+                        <img 
+                            className="w-5 hidden sm:block"
+                            src="/svg/cart.svg" 
+                            alt="shopping cart" 
+                        />
+                        
+                        <p className="font-bold block sm:block">Grozs</p>
+                    </div>
                 </Link>
             </button>
         </div>
