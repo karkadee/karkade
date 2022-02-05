@@ -2,6 +2,8 @@ import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import React from "react";
 import productCategories from "../tests/productCategories";
+import productData from "../tests/productData";
+import Product from "./Product";
 
 function HomeContainer() {
   return (
@@ -67,6 +69,21 @@ function HomeContainer() {
                             >
                                 <p className="font-bold hover:text-green-700 transition-colors duration-150">{cat.text}</p>
                             </button>
+                        )
+                    })
+                }
+            </div>
+        </div>
+
+        <div className="w-full flex justify-center">
+            <div className="grid grid-cols-4 gap-10 mt-20">
+                {
+                    productData.map((product, i) => {
+                        return (
+                            <Product 
+                                key={i}
+                                data={product}
+                            />
                         )
                     })
                 }

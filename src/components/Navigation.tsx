@@ -18,8 +18,6 @@ function Navigation() {
         return () => window.removeEventListener("scroll", transitionNavBar);
     }, []);
 
-    console.log(showCats)
-    
     return (
         <nav className="w-full fixed top-0 left-0 z-10">
             <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-6 py-3 bg-white">
