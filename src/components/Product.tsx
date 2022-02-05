@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Product } from "../redux/slices/appSlice";
 
 interface Props{
@@ -7,20 +7,23 @@ interface Props{
 }
 
 const ProductContainer: React.FC<Props> = ({data}) => {
-  return (
-    <div className="w-60 h-80 rounded-md flex items-center justify-between flex-col p-2 bg-white">
-        <Image 
-            className="rounded-t-md"
-            src={data.images[0]}
-            width={238}
-            height={238}
-        />
+    const [price] = useState(data.price.toString().split("."))
+    const [formattedPrice] = useState(`${price[0]}.${price.length === 2 ? price[1].length === 1 ? `${price[1]}0` : "00" : "00"}`);
 
-        <p>{data.name}</p>
+    return (
+        <div className="w-60 h-80 rounded-md flex items-center justify-between flex-col p-2 bg-white">
+            <Image 
+                className="rounded-t-md"
+                src={data.images[0]}
+                width={238}
+                height={238}
+            />
 
-        <strong>{data.price}</strong>
-    </div>
-  );
+            <p>{data.name}</p>
+
+            <strong>{formattedPrice}</strong>
+        </div>
+    );
 }
 
 export default ProductContainer;
