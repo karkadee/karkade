@@ -1,6 +1,7 @@
 import { Carousel } from "react-responsive-carousel";
 import Image from "next/image";
 import React from "react";
+import productCategories from "../tests/productCategories";
 
 function HomeContainer() {
   return (
@@ -30,7 +31,7 @@ function HomeContainer() {
                 <Carousel 
                     autoPlay
                     infiniteLoop
-                    interval={3000}
+                    interval={5000}
                     showThumbs={false}
                 >
                     <div className="w-full">
@@ -54,6 +55,21 @@ function HomeContainer() {
                         />
                     </div>
                 </Carousel>
+            </div>
+
+            <div className={`hidden md:flex w-full flex-col ss:flex-row items-center justify-center px-2 sm:px-10 py-1 bg-white transition-opacity duration-300`}>
+                {
+                    productCategories.map((cat, i) => {
+                        return (
+                            <button 
+                                key={i}
+                                className={`outline-green-600 p-1 ${productCategories.length - 1 === i ? "" : "mr-4"}`}
+                            >
+                                <p className="font-bold hover:text-green-700 transition-colors duration-150">{cat.text}</p>
+                            </button>
+                        )
+                    })
+                }
             </div>
         </div>
     </div>
