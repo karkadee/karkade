@@ -11,7 +11,7 @@ const ProductContainer: React.FC<Props> = ({data}) => {
     const [formattedPrice] = useState(`${price[0]}.${price.length === 2 ? price[1].length === 1 ? `${price[1]}0` : "00" : "00"}`);
 
     return (
-        <div className="w-60 h-80 rounded-md flex items-center justify-between flex-col p-2 bg-white">
+        <div className="w-60 h-80 rounded-md flex items-center justify-between flex-col p-2 bg-white cursor-pointer">
             <Image 
                 className="rounded-t-md"
                 src={data.images[0]}
