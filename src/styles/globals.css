@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    h1{
+        @apply text-3xl text-slate-900 font-bold;
+    }
+
+    p{
+        @apply text-base text-slate-900;
+    }
+
+    input{
+        @apply border-2 rounded-sm border-slate-900 px-2 text-slate-900;
+    }
+}
