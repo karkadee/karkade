@@ -10,6 +10,10 @@ const AuthorizationForm: React.FC = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const authorize = (e: any) => {
+        e.preventDefault();
+    }   
+
     return (
         <div className="flex items-center justify-center w-full p-0 h-full">
             <form className="w-11/12 max-w-[350px] bg-white flex flex-col items-center rounded-lg py-4 px-4">
@@ -63,6 +67,7 @@ const AuthorizationForm: React.FC = () => {
 
                 <div className="flex flex-row w-full justify-between">
                     <button 
+                        onClick={(e) => authorize(e)}
                         className="outline-green-600 py-1 px-6 rounded-md bg-green-600 text-white hover:bg-green-700"
                         type="submit"
                     >{type === "/auth/login" ? "Ieiet" : "Reģistrēties"}</button>
