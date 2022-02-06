@@ -23,7 +23,7 @@ function Navigation() {
     }
 
     return (
-        <nav className="w-full fixed top-0 left-0 z-10">
+        <nav className="w-full fixed top-0 left-0 z-50">
             <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 lg:px-20 py-3 bg-white">
                 <div className="mb-2 ss:mb-0 mr-2 lg:mr-0">
                     <button className="outline-green-600 p-1">
@@ -59,9 +59,9 @@ function Navigation() {
                         </Link>
                     </button>
 
-                    <button className="outline-green-600 p-1 sm:hidden">
+                    <button className="outline-green-600 p-1 sm:hidden mr-1">
                         <Link href="/search">
-                            <div className="flex mr-1">
+                            <div className="flex">
                                 <img 
                                     className="w-5"
                                     src="/svg/search.svg" 
