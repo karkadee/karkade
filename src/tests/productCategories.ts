@@ -23,7 +23,7 @@ const productCategories: Category[] = [
     },
     {
         _id: "123",
-        text: "Kāzu dekorācijas",
+        text: "Dekorācijas",
     },
     {
         _id: "123",
