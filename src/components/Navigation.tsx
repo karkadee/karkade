@@ -20,8 +20,8 @@ function Navigation() {
 
     return (
         <nav className="w-full fixed top-0 left-0 z-10">
-            <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-6 py-3 bg-white">
-                <div className="md:w-40 lg:w-60 mr-0 ss:mr-2 sm:mr-4 md:mr-8 mb-2 ss:mb-0">
+            <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-20 py-3 bg-white">
+                <div className="mb-2 ss:mb-0">
                     <button className="outline-green-600 p-1">
                         <Link href="/">
                             <h1>Karkadē</h1>
@@ -29,7 +29,7 @@ function Navigation() {
                     </button>
                 </div>
 
-                <div className="hidden sm:flex h-8 flex-1 rounded-md">
+                <div className="hidden sm:flex h-8 w-[400px] rounded-md">
                     <input 
                         className="rounded-l-md hidden sm:block w-full h-full outline-green-600"
                         placeholder="meklēt"
@@ -45,7 +45,7 @@ function Navigation() {
                 </div>
                 
 
-                <div className="justify-between ml-0 ss:ml-2 sm:ml-4 md:ml-8 w-full ss:w-52 sm:w-40 lg:w-60 flex items-center ss:justify-start">
+                <div className="justify-between flex items-center ss:justify-start">
                     <button className="mr-1 sm:mr-4 outline-green-600 p-1">
                         <Link href="/">
                             <p className="font-bold">Sākums</p>
