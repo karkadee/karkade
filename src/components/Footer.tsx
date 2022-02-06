@@ -7,73 +7,103 @@ function Footer() {
             <div className="md:mr-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto">
                 <strong className="">MŪSU KOMPĀNIJA</strong>
 
-                <Link href="/">
-                    <p className="">Par mums</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Par mums</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Mūsu veikali</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Mūsu veikali</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Privātuma politika</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Privātuma politika</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Lietošanas noteikumi un nosacījumi</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Lietošanas noteikumi un nosacījumi</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Juridisks paziņojums</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Juridisks paziņojums</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Kontakti</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Kontakti</p>
+                    </Link>
+                </button>
             </div>
 
             <div className="md:mx-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto">
                 <strong className="">JŪSU PROFILS</strong>
 
-                <Link href="/">
-                    <p className="">Personīgā informācija</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Personīgā informācija</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Pasūtījumi</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Pasūtījumi</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Kredīta izraksti</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Kredīta izraksti</p>
+                    </Link>
+                </button>
             </div>
 
             <div className="md:ml-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto">
                 <strong className="">VEIKALA INFORMĀCIJA</strong>
 
-                <Link href="/">
-                    <p className="">Karkadē</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Karkadē</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">SIA "Karkadē"</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">SIA "Karkadē"</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Tērbatas iela 19/21, Rīga, LV-1010</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Tērbatas iela 19/21, Rīga, LV-1010</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Reg.nr.50103327811</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Reg.nr.50103327811</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">Telefona nr.: +37126621676</p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">Telefona nr.: +37126621676</p>
+                    </Link>
+                </button>
 
-                <Link href="/">
-                    <p className="">E-pasts: <a href="mailto: karkade@karkade.lv">karkade@karkade.lv</a></p>
-                </Link>
+                <button>
+                    <Link href="/">
+                        <p className="">E-pasts: <a href="mailto: karkade@karkade.lv">karkade@karkade.lv</a></p>
+                    </Link>
+                </button>
             </div>
         </footer>
     );
