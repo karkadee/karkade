@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Footer from "../src/components/Footer";
 import HomeContainer from "../src/components/HomeContainer";
 import Navigation from "../src/components/Navigation";
 
@@ -14,6 +15,8 @@ export default function Home() {
       <Navigation />
 
       <HomeContainer />
+
+      <Footer />
     </div>
   )
 }

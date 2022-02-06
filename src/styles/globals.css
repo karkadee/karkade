@@ -15,6 +15,10 @@
         @apply text-base text-slate-900;
     }
 
+    a{
+        @apply text-green-600 text-base;
+    }
+
     input{
         @apply border-2 rounded-sm border-slate-900 px-2 text-slate-900;
     }
