@@ -31,7 +31,7 @@ function HomeContainer() {
             </div>
         </div>
 
-        <div className="w-full flex flex-col items-center justify-center">
+        <div className="w-full hidden sm:flex flex-col items-center justify-center">
             <div className="w-full sm:w-[600px] md:w-[750px] lg:w-[1000px]">
                 <Carousel 
                     autoPlay
