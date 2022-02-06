@@ -3,8 +3,8 @@ import React from "react";
 
 function Footer() {
     return (
-        <footer className="">
-            <div className="">
+        <footer className="w-full bg-white mt-20 flex flex-col md:flex-row items-center md:items-start justify-center py-4 px-0 md:px-10 lg:px-20">
+            <div className="md:mr-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto">
                 <strong className="">MŪSU KOMPĀNIJA</strong>
 
                 <Link href="/">
@@ -32,7 +32,7 @@ function Footer() {
                 </Link>
             </div>
 
-            <div className="">
+            <div className="md:mx-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto">
                 <strong className="">JŪSU PROFILS</strong>
 
                 <Link href="/">
@@ -48,7 +48,7 @@ function Footer() {
                 </Link>
             </div>
 
-            <div className="">
+            <div className="md:ml-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto">
                 <strong className="">VEIKALA INFORMĀCIJA</strong>
 
                 <Link href="/">
