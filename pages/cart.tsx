@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Footer from "../src/components/Footer";
 import Navigation from "../src/components/Navigation";
 
 export default function Cart() {
@@ -11,6 +12,8 @@ export default function Cart() {
       </Head>
 
       <Navigation />
+
+      <Footer />
     </div>
   )
 }
