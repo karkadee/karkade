@@ -18,10 +18,14 @@ function Navigation() {
         return () => window.removeEventListener("scroll", transitionNavBar);
     }, []);
 
+    const search = (e: any) => {
+        e.preventDefault();
+    }
+
     return (
         <nav className="w-full fixed top-0 left-0 z-10">
-            <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 sm:px-20 py-3 bg-white">
-                <div className="mb-2 ss:mb-0">
+            <div className="w-full flex flex-col ss:flex-row items-center justify-between px-2 lg:px-20 py-3 bg-white">
+                <div className="mb-2 ss:mb-0 mr-2 lg:mr-0">
                     <button className="outline-green-600 p-1">
                         <Link href="/">
                             <h1>Karkadē</h1>
@@ -29,23 +33,26 @@ function Navigation() {
                     </button>
                 </div>
 
-                <div className="hidden sm:flex h-8 w-[400px] rounded-md">
+                <form className="hidden sm:flex h-8 flex-1 max-w-[400px] rounded-md">
                     <input 
                         className="rounded-l-md hidden sm:block w-full h-full outline-green-600"
                         placeholder="meklēt"
                     />
 
-                    <button className="outline-green-600 p-1 h-full w-20 flex items-center justify-center bg-green-600 rounded-r-md">
+                    <button 
+                        className="outline-green-600 p-1 h-full w-20 flex items-center justify-center bg-green-600 rounded-r-md"
+                        onClick={(e) => search(e)}
+                    >
                         <img 
                             className="w-5"
                             src="/svg/search.svg" 
                             alt="search" 
                         />
                     </button>
-                </div>
+                </form>
                 
 
-                <div className="justify-between flex items-center ss:justify-start">
+                <div className="justify-between flex items-center ss:justify-start ml-2 lg:ml-0">
                     <button className="mr-1 sm:mr-4 outline-green-600 p-1">
                         <Link href="/">
                             <p className="font-bold">Sākums</p>
