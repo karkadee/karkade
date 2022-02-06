@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import productCategories from "../tests/productCategories";
 
 function Navigation() {
-    const [showCats, setShowCats] = useState(true);
+    const router = useRouter()
+
+    const [showCats, setShowCats] = useState(router.pathname === "/");
 
     const transitionNavBar = () => {
         if(window.scrollY > 300){
@@ -14,9 +17,11 @@ function Navigation() {
     }
     
     useEffect(() => {
-        window.addEventListener("scroll", transitionNavBar);
-        return () => window.removeEventListener("scroll", transitionNavBar);
-    }, []);
+        if(router.pathname === "/"){
+            window.addEventListener("scroll", transitionNavBar);
+            return () => window.removeEventListener("scroll", transitionNavBar);
+        }
+    }, [router.pathname]);
 
     const search = (e: any) => {
         e.preventDefault();
@@ -40,6 +45,7 @@ function Navigation() {
                     />
 
                     <button 
+                        type="submit"
                         className="outline-green-600 p-1 h-full w-20 flex items-center justify-center bg-green-600 rounded-r-md"
                         onClick={(e) => search(e)}
                     >
@@ -87,11 +93,15 @@ function Navigation() {
                         </Link>
                     </button>
 
-                    <button className="outline-green-600 py-1 px-3 rounded-md bg-green-600 ml-4 hidden md:flex">
-                        <Link href="/auth/login">
-                            <p className="font-bold block sm:block text-white">Ieiet</p>
-                        </Link>
-                    </button>
+                    {
+                        router.pathname !== "/auth/login" && router.pathname !== "/auth/register" && (
+                            <button className="outline-green-600 py-1 px-3 rounded-md bg-green-600 ml-4 hidden md:flex">
+                                <Link href="/auth/login">
+                                    <p className="font-bold block sm:block text-white">Ieiet</p>
+                                </Link>
+                            </button>
+                        )
+                    }
                 </div>
             </div>
 

@@ -1,10 +1,11 @@
 import Head from "next/head"
+import AuthorizationForm from "../../src/components/AuthorizationForm";
 import Footer from "../../src/components/Footer";
 import Navigation from "../../src/components/Navigation";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full h-screen">
       <Head>
         <title>Karkadē | Login</title>
         <meta name="description" content="Karkadē Populārākais puķu veikals Rīgā" />
@@ -12,6 +13,8 @@ export default function Home() {
       </Head>
 
       <Navigation />
+
+      <AuthorizationForm type="login" />
 
       <Footer />
     </div>

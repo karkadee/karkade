@@ -4,7 +4,7 @@ import Navigation from "../src/components/Navigation";
 
 export default function Cart() {
   return (
-    <div>
+    <div className="w-full h-screen">
       <Head>
         <title>Karkadē | Grozs</title>
         <meta name="description" content="Karkadē Populārākais puķu veikals Rīgā" />
