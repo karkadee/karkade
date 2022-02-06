@@ -14,7 +14,7 @@ export default function Home() {
 
       <Navigation />
 
-      <AuthorizationForm type="login" />
+      <AuthorizationForm />
 
       <Footer />
     </div>

@@ -1,4 +1,5 @@
 import Head from "next/head"
+import AuthorizationForm from "../../src/components/AuthorizationForm";
 import Footer from "../../src/components/Footer";
 import Navigation from "../../src/components/Navigation";
 
@@ -12,6 +13,8 @@ export default function Home() {
       </Head>
 
       <Navigation />
+
+      <AuthorizationForm />
 
       <Footer />
     </div>
