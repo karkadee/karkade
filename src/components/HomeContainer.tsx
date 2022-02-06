@@ -66,6 +66,18 @@ function HomeContainer() {
                     </Carousel>
                 </div>
 
+                <div className="w-full max-w-[500px] flex sm:hidden justify-center mt-8 relative">
+                    <img 
+                        className="w-full object-cover"
+                        src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                        alt="yellow sunflowers" 
+                    />
+
+                    <div className="absolute top-0 left-0 z-10 bg-darkTransparent w-full h-full flex justify-center items-center">
+                        <h2 className="text-white text-center">Piegāde Rīgā un Jūrmalā</h2>
+                    </div>
+                </div>
+
                 <div className={`sm:flex w-full sm:w-[600px] md:w-[750px] lg:w-[1000px] items-center justify-center px-2 sm:px-10 py-1 bg-white transition-opacity duration-300`}>
                     {
                         productCategories.map((cat, i) => {
@@ -79,18 +91,6 @@ function HomeContainer() {
                             )
                         })
                     }
-                </div>
-
-                <div className="w-full max-w-[400px] flex sm:hidden justify-center mt-8 relative">
-                    <img 
-                        className="w-full"
-                        src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                        alt="yellow sunflowers" 
-                    />
-
-                    <div className="absolute top-0 left-0 z-10 bg-slate-900 opacity-50 w-full h-full flex justify-center items-center">
-                        <h2>Piegāde Rīgā un Jūrmalā</h2>
-                    </div>
                 </div>
             </div>
 
