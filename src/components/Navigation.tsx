@@ -86,6 +86,12 @@ function Navigation() {
                             </div>
                         </Link>
                     </button>
+
+                    <button className="outline-green-600 py-1 px-3 rounded-md bg-green-600 ml-1">
+                        <Link href="/auth/login">
+                            <p className="font-bold block sm:block text-white">Ieiet</p>
+                        </Link>
+                    </button>
                 </div>
             </div>
 
