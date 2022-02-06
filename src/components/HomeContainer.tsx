@@ -8,15 +8,15 @@ import Product from "./Product";
 function HomeContainer() {
   return (
     <div className="w-full">
-        <div className="w-full flex items-center px-10 sm:px-20 lg:px-0 justify-center lg:justify-between pt-36 sm:pt-24 pb-16 sm:pb-10 md:pt-40 lg:py-0 lg:h-screen">
+        <div className="w-full flex items-center px-10 sm:px-20 lg:px-0 justify-center lg:justify-between pt-36 sm:pt-24 pb-0 sm:pb-10 md:pt-40 lg:py-0 lg:h-screen">
             <div className="hidden lg:block">
-            <Image 
-                src="/images/green-plant.png" 
-                alt="green plant facing up" 
-                priority
-                width={421}
-                height={593}
-            />
+                <Image 
+                    src="/images/green-plant.png" 
+                    alt="green plant facing up" 
+                    priority
+                    width={421}
+                    height={593}
+                />
             </div>
 
             <h1 className="text-center">Populārākais ziedu salons Rīgā ar vairāk nekā 10 gadu pieredzi</h1>
