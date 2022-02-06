@@ -9,7 +9,7 @@ const AuthorizationForm: React.FC = () => {
 
     return (
         <div className="flex items-center justify-center w-full p-0 h-full">
-            <form className="w-11/12 max-w-[320px] bg-white flex flex-col items-center rounded-lg py-4 px-4">
+            <form className="w-11/12 max-w-[350px] bg-white flex flex-col items-center rounded-lg py-4 px-4">
                 <h2 className="mb-4">{type === "/auth/login" ? "Ieiet" : "Reģistrēties"}</h2>
 
                 {
@@ -63,7 +63,7 @@ const AuthorizationForm: React.FC = () => {
 
                         <button>
                             <Link href={type === "/auth/login" ? "/auth/register" : "/auth/login"}>
-                                <p>{type === "/auth/login" ? "Reģistrējies" : "Ielogojies"}</p>
+                                <p className="text-green-600">{type === "/auth/login" ? "Reģistrējies" : "Ielogojies"}</p>
                             </Link>
                         </button>
                     </div>
