@@ -6,6 +6,9 @@ const AuthorizationForm: React.FC = () => {
     const router = useRouter();
 
     const [type] = useState(router.pathname);
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
     return (
         <div className="flex items-center justify-center w-full p-0 h-full">
@@ -18,6 +21,8 @@ const AuthorizationForm: React.FC = () => {
                             <label className="mb-1">Vārds</label>
 
                             <input 
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
                                 className="h-8"                        
                                 type="text" 
                                 placeholder="vārds"
@@ -32,8 +37,10 @@ const AuthorizationForm: React.FC = () => {
                     <label className="mb-1">Epasts</label>
 
                     <input 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         className="h-8"                        
-                        type="text" 
+                        type="email" 
                         placeholder="epasts"
                         name="email" 
                         id="email" 
@@ -44,8 +51,10 @@ const AuthorizationForm: React.FC = () => {
                     <label className="mb-1">Parole</label>
 
                     <input 
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
                         className="h-8"                        
-                        type="text" 
+                        type="password" 
                         placeholder="parole"
                         name="password" 
                         id="password" 
