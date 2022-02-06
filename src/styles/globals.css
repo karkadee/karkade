@@ -16,7 +16,7 @@
     }
 
     a{
-        @apply text-green-600 text-base;
+        @apply text-green-600 text-base outline-green-600;
     }
 
     input{

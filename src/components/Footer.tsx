@@ -8,37 +8,37 @@ function Footer() {
                 <strong>MŪSU KOMPĀNIJA</strong>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/about-us">
                         <p className="text-left">Par mums</p>
                     </Link>
                 </button>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/shops">
                         <p className="text-left">Mūsu veikali</p>
                     </Link>
                 </button>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/privacy-policy">
                         <p className="text-left">Privātuma politika</p>
                     </Link>
                 </button>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/terms-of-use">
                         <p className="text-left">Lietošanas noteikumi un nosacījumi</p>
                     </Link>
                 </button>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/legal-notice">
                         <p className="text-left">Juridisks paziņojums</p>
                     </Link>
                 </button>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/contacts">
                         <p className="text-left">Kontakti</p>
                     </Link>
                 </button>
@@ -48,19 +48,19 @@ function Footer() {
                 <strong>JŪSU PROFILS</strong>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/profile">
                         <p className="text-left">Personīgā informācija</p>
                     </Link>
                 </button>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/orders">
                         <p className="text-left">Pasūtījumi</p>
                     </Link>
                 </button>
 
                 <button>
-                    <Link href="/">
+                    <Link href="/credit-slips">
                         <p className="text-left">Kredīta izraksti</p>
                     </Link>
                 </button>
@@ -79,9 +79,7 @@ function Footer() {
 
                 <p className="text-left">Telefona nr.: +37126621676</p>
 
-                <Link href="/">
-                    <p className="text-left">E-pasts: <a href="mailto: karkade@karkade.lv">karkade@karkade.lv</a></p>
-                </Link>
+                <p className="text-left">E-pasts: <a href="mailto: karkade@karkade.lv">karkade@karkade.lv</a></p>
             </div>
         </footer>
     );
