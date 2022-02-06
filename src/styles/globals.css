@@ -20,7 +20,7 @@
     }
 
     input{
-        @apply border-2 rounded-sm border-slate-900 px-2 text-slate-900;
+        @apply border-2 rounded-sm border-slate-900 px-2 text-slate-900 outline-green-600;
     }
 
     button{

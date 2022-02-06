@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Product } from "./appSlice";
 
 export interface User{
     _id: string;
@@ -7,13 +8,13 @@ export interface User{
     phoneNumber: string;
     password: string;
     role: string;
-    cart: any[];
+    cart: Product[];
 }
 
 interface State{
     loggedIn: boolean,
     token: string,
-    info: any,
+    info: User | null,
     loading: boolean,
 }
 
