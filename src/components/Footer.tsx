@@ -5,7 +5,7 @@ function Footer() {
     return (
         <footer className="w-full bg-white mt-20 flex flex-col md:flex-row items-center md:items-start justify-center py-4 px-0 md:px-10 lg:px-20">
             <div className="md:mr-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto flex flex-col items-start">
-                <strong className="">MŪSU KOMPĀNIJA</strong>
+                <strong>MŪSU KOMPĀNIJA</strong>
 
                 <button>
                     <Link href="/">
@@ -45,7 +45,7 @@ function Footer() {
             </div>
 
             <div className="md:mx-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto flex flex-col items-start">
-                <strong className="">JŪSU PROFILS</strong>
+                <strong>JŪSU PROFILS</strong>
 
                 <button>
                     <Link href="/">
@@ -67,43 +67,21 @@ function Footer() {
             </div>
 
             <div className="md:ml-10 mb-4 pl-4 sm:pl-0 w-full sm:w-80 md:w-auto flex flex-col items-start">
-                <strong className="">VEIKALA INFORMĀCIJA</strong>
+                <strong>VEIKALA INFORMĀCIJA</strong>
 
-                <button>
-                    <Link href="/">
-                        <p className="text-left">Karkadē</p>
-                    </Link>
-                </button>
+                <p className="text-left">Karkadē</p>
 
-                <button>
-                    <Link href="/">
-                        <p className="text-left">SIA "Karkadē"</p>
-                    </Link>
-                </button>
+                <p className="text-left">SIA "Karkadē"</p>
 
-                <button>
-                    <Link href="/">
-                        <p className="text-left">Tērbatas iela 19/21, Rīga, LV-1010</p>
-                    </Link>
-                </button>
+                <p className="text-left">Tērbatas iela 19/21, Rīga, LV-1010</p>
 
-                <button>
-                    <Link href="/">
-                        <p className="text-left">Reg.nr.50103327811</p>
-                    </Link>
-                </button>
+                <p className="text-left">Reg.nr.50103327811</p>
 
-                <button>
-                    <Link href="/">
-                        <p className="text-left">Telefona nr.: +37126621676</p>
-                    </Link>
-                </button>
+                <p className="text-left">Telefona nr.: +37126621676</p>
 
-                <button>
-                    <Link href="/">
-                        <p className="text-left">E-pasts: <a href="mailto: karkade@karkade.lv">karkade@karkade.lv</a></p>
-                    </Link>
-                </button>
+                <Link href="/">
+                    <p className="text-left">E-pasts: <a href="mailto: karkade@karkade.lv">karkade@karkade.lv</a></p>
+                </Link>
             </div>
         </footer>
     );
