@@ -71,7 +71,7 @@ function Footer() {
 
                 <p className="text-left">Karkadē</p>
 
-                <p className="text-left">SIA "Karkadē"</p>
+                <p className="text-left">SIA {`"Karkadē"`}</p>
 
                 <p className="text-left">Tērbatas iela 19/21, Rīga, LV-1010</p>
 
