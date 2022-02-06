@@ -12,6 +12,7 @@ module.exports = {
       },
       colors: {
         karkadeGray: "#F1F1F1",
+        darkTransparent: "rgba(0, 0, 0, 0.5)"
       },
     },
   },
