@@ -32,11 +32,29 @@ export const userSlice = createSlice({
         login: (state) => {
             state.loggedIn = true;
         },
+        setUserInfo: (state, action) => {
+            state.info = action.payload;
+        },
+        setToken: (state, action) => {
+            state.token = action.payload;
+        },
+        logout: (state) => {
+            state.info = null;
+            state.token = "";
+            state.loggedIn = false;
+        },
+        loaded: (state) => {
+            state.loading = false;
+        },
     },
 });
 
 export const {
     login,
+    setUserInfo,
+    setToken,
+    loaded,
+    logout
 } = userSlice.actions;
 
 export const selectUser = (state: any) => state.user;
