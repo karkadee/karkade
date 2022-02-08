@@ -9,6 +9,7 @@ const AuthorizationForm: React.FC = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
 
     const authorize = (e: any) => {
         e.preventDefault();
@@ -50,6 +51,24 @@ const AuthorizationForm: React.FC = () => {
                         id="email" 
                     />
                 </div>
+
+                {
+                    type === "/auth/register" && (
+                        <div className="flex flex-col w-full mb-4">
+                            <label className="mb-1">Telefona numurs</label>
+
+                            <input 
+                                value={phoneNumber}
+                                onChange={(e) => setPhoneNumber(e.target.value)}
+                                className="h-8"                        
+                                type="text" 
+                                placeholder="numurs"
+                                name="phone" 
+                                id="phone" 
+                            />
+                        </div>
+                    )
+                }
 
                 <div className="flex flex-col w-full mb-4">
                     <label className="mb-1">Parole</label>
