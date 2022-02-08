@@ -21,7 +21,7 @@ const AuthorizationForm: React.FC = () => {
         if(type === "/auth/register"){
             register(name, email, password, phoneNumber, dispatch, router, loading, setLoading);
         }else if(type === "/auth/login"){
-            loginUser(name, password, dispatch, loading, setLoading);
+            loginUser(email, password, dispatch, loading, setLoading);
         }
     }   
 

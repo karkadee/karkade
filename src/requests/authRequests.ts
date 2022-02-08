@@ -45,15 +45,15 @@ const register = async (name: string, email: string, password: string, phoneNumb
         })
 }
 
-const loginUser = async (name: string, password: string, dispatch: any, loading: boolean, setLoading: React.Dispatch<SetStateAction<boolean>>) => {
-    if(loading){
+const loginUser = async (email: string, password: string, dispatch: any, loading: boolean, setLoading: React.Dispatch<SetStateAction<boolean>>) => {
+    if(loading || !email || !password){
         return;
     }
     
     setLoading(true);
 
     const data = {
-        name: name,
+        email: email,
         password: password
     }
 
