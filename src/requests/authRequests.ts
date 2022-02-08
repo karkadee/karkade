@@ -4,23 +4,23 @@ import { Dispatch } from "redux";
 import { setNotification } from "../redux/slices/notificationSlice";
 import { loaded, login, logout, setToken, setUserInfo, User } from "../redux/slices/userSlice";
 import valid from "../utils/valid";
-import { ACCESS_TOKEN_ROUTE, LOGIN_ROUTE, REGISTER_ROUTE, UPLOAD_ROUTE, USER_BASE, USER_INFO_ROUTE } from "./apiRoutes";
+import { ACCESS_TOKEN_ROUTE, LOGIN_ROUTE, REGISTER_ROUTE, USER_BASE, USER_INFO_ROUTE } from "./apiRoutes";
 
-const register = async (username: string, email: string, password: string, phoneNumber: string, dispatch: any, navigation: any, loading: boolean, setLoading: React.Dispatch<SetStateAction<boolean>>) => {
+const register = async (name: string, email: string, password: string, phoneNumber: string, dispatch: any, navigation: any, loading: boolean, setLoading: React.Dispatch<SetStateAction<boolean>>) => {
     if(loading){
         return;
     }
     
     setLoading(true);
 
-    const invalid = valid(username, email, password);
+    const invalid = valid(name, email, password);
     if(invalid){
         setLoading(false);
         return dispatch(setNotification({type: "error", message: invalid}));
     }
 
     const data = {
-        username: username,
+        name: name,
         email: email,
         password: password,
         phoneNumber: phoneNumber
@@ -45,7 +45,7 @@ const register = async (username: string, email: string, password: string, phone
         })
 }
 
-const loginUser = async (username: string, password: string, dispatch: any, loading: boolean, setLoading: React.Dispatch<SetStateAction<boolean>>) => {
+const loginUser = async (name: string, password: string, dispatch: any, loading: boolean, setLoading: React.Dispatch<SetStateAction<boolean>>) => {
     if(loading){
         return;
     }
@@ -53,7 +53,7 @@ const loginUser = async (username: string, password: string, dispatch: any, load
     setLoading(true);
 
     const data = {
-        username: username,
+        name: name,
         password: password
     }
 

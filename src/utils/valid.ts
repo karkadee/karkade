@@ -1,14 +1,14 @@
-const valid = (username: string, email: string, password: string) => {
-    if(!username || !email || !password)
+const valid = (name: string, email: string, password: string) => {
+    if(!name || !email || !password)
         return "Please fill in all fields."
 
-    if(username.length > 15){
-        return "Your username can't be that long."
+    if(name.length > 50){
+        return "Your name can't be that long."
     }
 
     let format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    if(format.test(username)){
-        return "Username can't contain special characters";
+    if(format.test(name)){
+        return "Name can't contain special characters";
     }
 
     if(!validateEmail(email)){

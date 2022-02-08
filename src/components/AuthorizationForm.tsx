@@ -1,18 +1,28 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { loginUser, register } from "../requests/authRequests";
 
 const AuthorizationForm: React.FC = () => {
     const router = useRouter();
+    const dispatch = useDispatch();
 
     const [type] = useState(router.pathname);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const authorize = (e: any) => {
         e.preventDefault();
+
+        if(type === "/auth/register"){
+            register(name, email, password, phoneNumber, dispatch, router, loading, setLoading);
+        }else if(type === "/auth/login"){
+            loginUser(name, password, dispatch, loading, setLoading);
+        }
     }   
 
     return (
