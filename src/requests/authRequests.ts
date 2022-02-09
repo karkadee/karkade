@@ -27,9 +27,13 @@ const register = async (name: string, email: string, password: string, phoneNumb
     }
 
     await axios.post(REGISTER_ROUTE, data)
-        .then((res) => {
-            setLoading(false);
-            navigation.navigate("SignIn");
+        .then(async (res) => {
+            const rf_token = res.data.refresh_token;
+            await localStorage.saveItem("rf_token", rf_token);
+
+            console.log(rf_token)
+
+            await getAccessToken(dispatch);
         }).catch(async (err) => {
             setLoading(false);
             const error: string = err?.response?.data?.err;
@@ -59,6 +63,9 @@ const loginUser = async (email: string, password: string, dispatch: any, loading
 
     axios.post(LOGIN_ROUTE, data)
         .then(async (res) => {
+            const rf_token = res.data.refresh_token;
+            await localStorage.saveItem("rf_token", rf_token);
+
             await getAccessToken(dispatch);
         }).catch(async (err) => {
             setLoading(false);
@@ -75,8 +82,9 @@ const loginUser = async (email: string, password: string, dispatch: any, loading
         })
 }
 
-const getAccessToken = async (dispatch: any) => {
-    const rf_token = window.localStorage.getItem("rf_token");
+const getAccessToken = async (dispatch: Dispatch) => {
+    const rf_token = localStorage.getItem("rf_token");
+    console.log(rf_token)
 
     if(!rf_token){
         return dispatch(logout());
